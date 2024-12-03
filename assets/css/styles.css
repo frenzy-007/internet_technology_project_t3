@@ -1,0 +1,132 @@
+/*Generic styles*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+ul > li {
+  list-style: none;
+}
+
+/* Specific styles*/
+
+.container-header {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* 3 equal columns for larger screens */
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+.container-logo {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  background-color: blue;
+  padding: 1.5rem;
+}
+
+.logo {
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+.container-logo > span {
+  font-size: 2rem;
+  color: white;
+}
+
+/* Navigation Menu */
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Search and Language Selector */
+.container-header > div {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: black;
+}
+
+.search-button:hover {
+  color: #007bff;
+}
+
+.language-selector {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .container-header {
+    grid-template-columns: 1fr 2fr; /* 2 columns on mobile */
+    grid-template-rows: auto 1fr; /* Stacking the logo and nav */
+    gap: 0.5rem;
+  }
+
+  .container-logo {
+    justify-content: flex-start;
+  }
+
+  .nav ul {
+    display: none; /* Hide nav links by default */
+  }
+
+  .container-header > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+
+  /* Toggle Nav Links Visibility for Mobile */
+  .nav-active ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block; /* Menu toggle button */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 2rem; /* Adjust logo size on smaller screens */
+  }
+}
