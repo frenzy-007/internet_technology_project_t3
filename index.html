@@ -16,7 +16,7 @@
     />
   </head>
   <body>
-    <header class="container-header">
+    <header class="container-header full-width padding-bottom-10">
       <div class="container-logo">
         <img
           src="/assets/images/web_logo.png"
@@ -40,7 +40,7 @@
           <li><a href="" class="nav-menu-button">Things to do</a></li>
         </ul>
       </nav>
-      <div>
+      <div class="full-width">
         <div class="search-field">
           <input id="input-search" type="text" placeholder="Search..." />
           <button aria-label="Search" class="search-button">
@@ -69,18 +69,25 @@
         </div>
       </div>
     </header>
-    <main>
+    <main class="full-width">
       <section>
         <div>
-          <figure>
-            <img src="" alt="" />
+          <figure class="big-image-view">
+            <img
+              id="swappable-image"
+              src="./assets/images/pexels-elias-tigiser-411757-9088004.jpg"
+              alt=""
+            />
           </figure>
         </div>
+        <div class="image-controls padding-row-10">
+          <button id="prev" type="button">Previous</button>
+          <button id="next" type="button">Next</button>
+        </div>
         <div>
-          <h3>Basic Information</h3>
-          <br />
+          <h3 class="mini-section-h3">Basic Information</h3>
           <div>
-            <p>Geographic Location</p>
+            <p class="p-header">Geographic Location:</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
               obcaecati facilis ea voluptas, blanditiis doloremque at neque ex
@@ -88,44 +95,57 @@
               reiciendis sit nam culpa quasi? Corrupti dignissimos, maxime
               consequuntur ipsum obcaecati tempore laudantium voluptatum labore?
             </p>
-            <br />
-            <p>Population:</p>
+            <p class="p-header">Population:</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Consequuntur, nostrum.
             </p>
-            <br />
-            <p>Climate:</p>
+            <p class="p-header">Climate:</p>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
               officiis minima ullam deserunt odio repellat voluptas rem quo.
               Rerum, ea repellendus labore adipisci aliquid eum!
             </p>
           </div>
-          <div>
-            <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+          <div class="container-link-detail-page">
+            <a href="#" title="Link to detail page" class="button"
+              ><i class="fa-solid fa-arrow-right"></i
+            ></a>
           </div>
         </div>
       </section>
       <section>
         <div>
-          <h2>News</h2>
+          <h2 class="mini-section-2">
+            <span class="sq-start">■</span>&#32;News
+          </h2>
+          <p class="info-h2">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio,
+            dolore!
+          </p>
         </div>
-        <div>
-          <div>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio,
-              dolore!
-            </p>
-          </div>
-          <div><a href="">see all</a></div>
+        <div class="margin-bottom-10">
+          <a href="./pages/news.html" class="see-detail-page-link">See all</a>
         </div>
-        <div>
+        <div class="scroll-container">
           <article>
-            <figure><img src="" alt="" /></figure>
-            <div><span>News</span><span>20/02/2024</span></div>
+            <figure class="margin-bottom-0">
+              <img
+                class="new-image"
+                src="./assets/images/pexels-mohammedsuhail-2723091.jpg"
+                alt="New Image"
+              />
+            </figure>
+            <div class="container-extra-info margin-bottom-20">
+              <div class="box-type-date background-color-orange">
+                <span>News</span>
+              </div>
+              <div class="box-type-date background-color-blue">
+                <span>20/02/2024</span>
+              </div>
+            </div>
             <div>
-              <h3>Lorem ipsum dolor sit amet.</h3>
+              <a href=""><h3>Lorem ipsum dolor sit amet.</h3></a>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Dolorem enim aspernatur error recusandae soluta amet sunt sed
@@ -134,10 +154,23 @@
             </div>
           </article>
           <article>
-            <figure><img src="" alt="" /></figure>
-            <div><span>News</span><span>20/02/2024</span></div>
+            <figure class="margin-bottom-0">
+              <img
+                class="new-image"
+                src="./assets/images/pexels-janetrangdoan-723072.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="container-extra-info">
+              <div class="box-type-date background-color-orange">
+                <span>News</span>
+              </div>
+              <div class="box-type-date background-color-blue">
+                <span>20/02/2024</span>
+              </div>
+            </div>
             <div>
-              <h3>Lorem ipsum dolor sit amet.</h3>
+              <a href=""><h3>Lorem ipsum dolor sit amet.</h3></a>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Dolorem enim aspernatur error recusandae soluta amet sunt sed
@@ -146,10 +179,23 @@
             </div>
           </article>
           <article>
-            <figure><img src="" alt="" /></figure>
-            <div><span>News</span><span>20/02/2024</span></div>
+            <figure class="margin-bottom-0">
+              <img
+                class="new-image"
+                src="./assets/images/pexels-mjlo-2872418.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="container-extra-info">
+              <div class="box-type-date background-color-orange">
+                <span>News</span>
+              </div>
+              <div class="box-type-date background-color-blue">
+                <span>20/02/2024</span>
+              </div>
+            </div>
             <div>
-              <h3>Lorem ipsum dolor sit amet.</h3>
+              <a href=""><h3>Lorem ipsum dolor sit amet.</h3></a>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Dolorem enim aspernatur error recusandae soluta amet sunt sed
@@ -158,34 +204,25 @@
             </div>
           </article>
           <article>
-            <figure><img src="" alt="" /></figure>
-            <div><span>News</span><span>20/02/2024</span></div>
-            <div>
-              <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Dolorem enim aspernatur error recusandae soluta amet sunt sed
-                temporibus totam aliquam.
-              </p>
+            <figure class="margin-bottom-0">
+              <img
+                class="new-image"
+                src="./assets/images/pexels-janetrangdoan-723072.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="container-extra-info">
+              <div class="box-type-date background-color-orange">
+                <span>News</span>
+              </div>
+              <div class="box-type-date background-color-blue">
+                <span>20/02/2024</span>
+              </div>
             </div>
-          </article>
-          <article>
-            <figure><img src="" alt="" /></figure>
-            <div><span>News</span><span>20/02/2024</span></div>
             <div>
-              <h3>Lorem ipsum dolor sit amet.</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Dolorem enim aspernatur error recusandae soluta amet sunt sed
-                temporibus totam aliquam.
-              </p>
-            </div>
-          </article>
-          <article>
-            <figure><img src="" alt="" /></figure>
-            <div><span>News</span><span>20/02/2024</span></div>
-            <div>
-              <h3>Lorem ipsum dolor sit amet.</h3>
+              <a href="" class="margin-left-5"
+                ><h3>Lorem ipsum dolor sit amet.</h3></a
+              >
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Dolorem enim aspernatur error recusandae soluta amet sunt sed
