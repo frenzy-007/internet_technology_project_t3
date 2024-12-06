@@ -1,4 +1,4 @@
-/*Generic styles*/
+/**************Generic styles**************/
 * {
   margin: 0;
   padding: 0;
@@ -16,24 +16,69 @@ ul > li {
   list-style: none;
 }
 
-/* Specific styles*/
-
 main > section {
-  padding: 10px;
+  padding: 50px 10px;
 }
 
-.container-header {
-  background-color: rgb(232, 255, 247);
+/**************End Generic styles**************/
+
+/**************Default Color**************/
+/*Color*/
+.color-white {
+  color: white;
 }
 
-.margin-left-null {
-  margin-left: 0;
+.color-black {
+  color: black;
 }
 
-.margin-left-5 {
-  margin-left: 5px;
+.color-blue {
+  color: rgb(0, 75, 168);
 }
 
+.color-beige {
+  color: beige;
+}
+
+.color-red {
+  color: red;
+}
+
+.color-yellow {
+  color: yellow;
+}
+
+.color-green {
+  color: green;
+}
+
+.color-darkslategrey {
+  color: darkslategrey;
+}
+
+/*Back Ground Color*/
+.background-color-orange {
+  background-color: rgb(225, 165, 0);
+}
+
+.background-color-blue {
+  background-color: rgb(0, 75, 168);
+}
+
+.background-color-light-gray {
+  background-color: lightgray;
+}
+
+.background-color-whitesmoke {
+  background-color: whitesmoke;
+}
+
+/*Font Weight*/
+.font-weight-600 {
+  font-weight: 600;
+}
+
+/*Width*/
 .full-width {
   width: 100vw;
 }
@@ -42,6 +87,7 @@ main > section {
   width: 100%;
 }
 
+/*Margin*/
 .margin-bottom-10 {
   margin-bottom: 10px;
 }
@@ -54,12 +100,48 @@ main > section {
   margin-bottom: 0;
 }
 
+.margin-top-15 {
+  margin-top: 15px;
+}
+
+.margin-left-null {
+  margin-left: 0;
+}
+
+.margin-left-5 {
+  margin-left: 5px;
+}
+
+.margin-right-5 {
+  margin-right: 5px;
+}
+
+.margin-top_-10 {
+  margin-top: -10px;
+}
+
+.margin-bottom_-10 {
+  margin-bottom: -10px;
+}
+
+.margin-bottom_-5 {
+  margin-bottom: -5px;
+}
+/*Padding*/
 .padding-bottom-10 {
   padding-bottom: 10px;
 }
 
 .padding-row-10 {
   padding: 0 10px;
+}
+
+/**************End Default Color**************/
+
+/* Specific styles*/
+
+.container-header {
+  background-color: rgb(232, 255, 247);
 }
 
 .container-logo {
@@ -219,11 +301,6 @@ main > section {
   font-weight: 600;
 }
 
-.mini-section-2 {
-  color: black;
-  font-weight: 600;
-}
-
 .p-header {
   color: #484848;
   margin-bottom: 3px;
@@ -246,23 +323,21 @@ main > section {
   color: white;
 }
 
-section:nth-of-type(even) {
-  background-color: rgb(238, 251, 255);
+section:nth-of-type(odd):not(:first-child) {
+  background-color: rgb(0, 75, 168);
+  color: white;
 }
 
 .sq-start {
   color: rgb(0, 75, 168);
 }
 
+.sq-start-yellow {
+  color: darkorange;
+}
+
 .mini-section-2 {
   margin-bottom: 0;
-}
-.info-h2 {
-  color: rgb(99, 99, 99);
-}
-.see-detail-page-link {
-  color: rgb(0, 75, 168);
-  font-weight: 600;
 }
 
 .scroll-container {
@@ -271,8 +346,16 @@ section:nth-of-type(even) {
   overflow-x: auto;
   scroll-snap-align: x mandatory;
 }
-.scroll-container > article {
+.scroll-container > .new-article {
   width: 80vw;
+  flex: 0 0 auto;
+  margin-right: 20px; /* Add spacing between articles */
+  scroll-snap-align: start;
+}
+
+.scroll-container > .event-container-even,
+.event-container-odd {
+  width: 60vw;
   flex: 0 0 auto;
   margin-right: 20px; /* Add spacing between articles */
   scroll-snap-align: start;
@@ -299,14 +382,59 @@ section:nth-of-type(even) {
   color: white;
 }
 
-.background-color-orange {
-  background-color: rgb(225, 165, 0);
+.event-container-odd {
+  padding: 20px;
+  background-color: white;
 }
 
-.background-color-blue {
-  background-color: rgb(0, 75, 168);
+.event-container-even {
+  padding: 20px;
+  background-color: salmon;
 }
 
+.event-date {
+  font-size: 5rem;
+  margin: 0;
+}
+.event-month,
+.event-location {
+  font-size: 2rem;
+  margin-top: -15px;
+  margin-bottom: 0;
+}
+
+.container-event-date-month {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.one-transport-box {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.transport-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: centert;
+}
+
+.one-transport-box > div:first-child {
+  display: flex;
+  flex-direction: row;
+}
+
+.link-transport-new-tab {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 /* Responsive Styles */
 
 /*Screen size smaller than 300px*/
