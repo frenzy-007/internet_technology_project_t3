@@ -50,7 +50,7 @@
           </select>
         </div>
         <div>
-          <a href="" id="contact-button" class="button"
+          <a href="#contact-section" id="contact-button" class="button"
             ><i class="fa-solid fa-phone"></i
           ></a>
         </div>
@@ -59,20 +59,39 @@
       <nav class="nav-menu padding-bottom-10">
         <ul>
           <li class="active">
-            <a href="#" class="nav-menu-button color-white">Home</a>
+            <a href="/" class="nav-menu-button color-white">Home</a>
           </li>
-          <li><a href="" class="nav-menu-button color-black">Poděbrady</a></li>
-          <li><a href="" class="nav-menu-button color-black">News</a></li>
-          <li><a href="" class="nav-menu-button color-black">Events</a></li>
-          <li><a href="" class="nav-menu-button color-black">Transport</a></li>
           <li>
-            <a href="" class="nav-menu-button color-black">Things to do</a>
+            <a href="#podebrady-section" class="nav-menu-button color-black"
+              >Poděbrady</a
+            >
+          </li>
+          <li>
+            <a href="#news-section" class="nav-menu-button color-black">News</a>
+          </li>
+          <li>
+            <a href="#event-section" class="nav-menu-button color-black"
+              >Events</a
+            >
+          </li>
+          <li>
+            <a href="#transport-section" class="nav-menu-button color-black"
+              >Transport</a
+            >
+          </li>
+          <li>
+            <a href="#thing-to-do-section" class="nav-menu-button color-black"
+              >Things to do</a
+            >
           </li>
         </ul>
       </nav>
     </header>
     <main class="full-width">
-      <section class="podebrady-section background-color-light-gray">
+      <section
+        class="podebrady-section background-color-light-gray"
+        id="podebrady-section"
+      >
         <div class="podebrady-section-1">
           <figure class="big-image-view">
             <img
@@ -110,13 +129,16 @@
             </p>
           </div>
           <div class="container-link-detail-page">
-            <a href="#" title="Link to detail page" class="button"
+            <a
+              href="/pages/podebrady.html"
+              title="Link to detail page"
+              class="button"
               ><i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
         </div>
       </section>
-      <section class="section-news">
+      <section class="section-news" id="news-section">
         <div class="section-news-header">
           <h2 class="mini-section-2">
             <span class="sq-start">■</span>&#32;News
@@ -234,7 +256,7 @@
           </article>
         </div>
       </section>
-      <section class="section-event">
+      <section class="section-event" id="event-section">
         <div class="section-event-header">
           <h2 class="color-white font-weight-600 mini-section-2">
             <span class="sq-start-yellow">■</span>&#32;Events
@@ -245,7 +267,7 @@
           </p>
         </div>
         <div class="margin-bottom-10 section-event-see-all">
-          <a href="./pages/news.html" class="font-weight-600 color-white"
+          <a href="./pages/event.html" class="font-weight-600 color-white"
             >See all</a
           >
         </div>
@@ -328,7 +350,7 @@
           </article>
         </div>
       </section>
-      <section class="section-transport">
+      <section class="section-transport" id="transport-section">
         <div class="header-3-section-transport">
           <h2 class="color-black font-weight-600 mini-section-2">
             <span class="sq-start">■</span>&#32;Transport
@@ -339,7 +361,7 @@
           </p>
         </div>
         <div class="margin-bottom-10 header-3-section-transport-see-all">
-          <a href="./pages/news.html" class="font-weight-600 color-blue"
+          <a href="./pages/transport.html" class="font-weight-600 color-blue"
             >See all</a
           >
         </div>
@@ -398,7 +420,7 @@
           </div>
         </div>
       </section>
-      <section class="section-thing-to-do">
+      <section class="section-thing-to-do" id="thing-to-do-section">
         <div class="section-thing-to-do-header">
           <h2 class="color-white font-weight-600 mini-section-2">
             <span class="sq-start-yellow">■</span>&#32;Things to Do
@@ -409,7 +431,7 @@
           </p>
         </div>
         <div class="margin-bottom-10 section-thing-to-do-see-all">
-          <a href="./pages/news.html" class="font-weight-600 color-beige"
+          <a href="./pages/thing_to_do.html" class="font-weight-600 color-beige"
             >See all</a
           >
         </div>
@@ -466,7 +488,7 @@
           </div>
         </div>
       </section>
-      <section class="section-contact">
+      <section class="section-contact" id="contact-section">
         <div class="section-contact-header">
           <h2 class="color-black font-weight-600 mini-section-2">
             <span class="sq-start">■</span>&#32;Contacts
@@ -477,7 +499,7 @@
           </p>
         </div>
         <div class="margin-bottom-10 section-contact-see-all">
-          <a href="./pages/news.html" class="font-weight-600 color-blue"
+          <a href="./pages/contact.html" class="font-weight-600 color-blue"
             >See all</a
           >
         </div>
@@ -621,5 +643,6 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/home-page-script.js"></script>
   </body>
 </html>

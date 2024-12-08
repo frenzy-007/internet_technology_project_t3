@@ -1,0 +1,29 @@
+/*Individual Page*/
+.podebrady-page-title-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+}
+
+.podebrady-page-title {
+  padding: 50px;
+  margin-bottom: 0;
+}
+
+.section-podebrady-detail {
+  padding: 10px;
+}
+
+.single-box-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.single-box-detail > h4,
+p {
+  margin: 0;
+  font-size: 1.6rem;
+}
