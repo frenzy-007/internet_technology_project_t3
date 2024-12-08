@@ -16,7 +16,7 @@
     />
   </head>
   <body>
-    <header class="container-header full-width padding-bottom-10">
+    <header class="container-header full-width background-color-lightseagreen">
       <div class="container-logo">
         <img
           src="/assets/images/web_logo.png"
@@ -25,53 +25,55 @@
         />
         <h1 class="web-header">Poděbrady</h1>
         <div class="take-remain-space"></div>
-        <button class="menu-icon" aria-label="Toggle Menu">
+        <button type="button" class="menu-icon" aria-label="Toggle Menu">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
-      <!-- Navigation Menu -->
-      <nav class="nav-menu">
-        <ul>
-          <li><a href="#" class="nav-menu-button">Home</a></li>
-          <li><a href="" class="nav-menu-button">Poděbrady</a></li>
-          <li><a href="" class="nav-menu-button">News</a></li>
-          <li><a href="" class="nav-menu-button">Events</a></li>
-          <li><a href="" class="nav-menu-button">Transport</a></li>
-          <li><a href="" class="nav-menu-button">Things to do</a></li>
-        </ul>
-      </nav>
-      <div class="full-width">
-        <div class="search-field">
-          <input id="input-search" type="text" placeholder="Search..." />
-          <button aria-label="Search" class="search-button">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
+      <div class="search-field">
+        <input id="input-search" type="text" placeholder="Search..." />
+        <button aria-label="Search" class="search-button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      <div class="flex-box-row-end lan-contact padding-bottom-10">
+        <div>
+          <select
+            name=""
+            id=""
+            aria-label="Choose Language"
+            class="language-selector"
+          >
+            <option value="En" selected>English</option>
+            <option value="Fr">Français</option>
+            <option value="Es">Español</option>
+            <option value="De">Deutsch</option>
+          </select>
         </div>
-        <div class="flex-box-row-end lan-contact">
-          <div>
-            <select
-              name=""
-              id=""
-              aria-label="Choose Language"
-              class="language-selector"
-            >
-              <option value="En" selected>English</option>
-              <option value="Fr">Français</option>
-              <option value="Es">Español</option>
-              <option value="De">Deutsch</option>
-            </select>
-          </div>
-          <div>
-            <a href="" id="contact-button" class="button"
-              ><i class="fa-solid fa-phone"></i
-            ></a>
-          </div>
+        <div>
+          <a href="" id="contact-button" class="button"
+            ><i class="fa-solid fa-phone"></i
+          ></a>
         </div>
       </div>
+      <!-- Navigation Menu -->
+      <nav class="nav-menu padding-bottom-10">
+        <ul>
+          <li class="active">
+            <a href="#" class="nav-menu-button color-white">Home</a>
+          </li>
+          <li><a href="" class="nav-menu-button color-black">Poděbrady</a></li>
+          <li><a href="" class="nav-menu-button color-black">News</a></li>
+          <li><a href="" class="nav-menu-button color-black">Events</a></li>
+          <li><a href="" class="nav-menu-button color-black">Transport</a></li>
+          <li>
+            <a href="" class="nav-menu-button color-black">Things to do</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main class="full-width">
-      <section class="background-color-light-gray">
-        <div>
+      <section class="podebrady-section background-color-light-gray">
+        <div class="podebrady-section-1">
           <figure class="big-image-view">
             <img
               id="swappable-image"
@@ -80,11 +82,11 @@
             />
           </figure>
         </div>
-        <div class="image-controls padding-row-10">
+        <div class="image-controls padding-row-10 podebrady-section-2">
           <button id="prev" type="button">Previous</button>
           <button id="next" type="button">Next</button>
         </div>
-        <div>
+        <div class="podebrady-section-3">
           <h3 class="mini-section-h3">Basic Information</h3>
           <div>
             <p class="p-header">Geographic Location:</p>
@@ -114,8 +116,8 @@
           </div>
         </div>
       </section>
-      <section>
-        <div>
+      <section class="section-news">
+        <div class="section-news-header">
           <h2 class="mini-section-2">
             <span class="sq-start">■</span>&#32;News
           </h2>
@@ -124,12 +126,12 @@
             dolore!
           </p>
         </div>
-        <div class="margin-bottom-10">
+        <div class="margin-bottom-10 section-news-see-all">
           <a href="./pages/news.html" class="color-blue font-weight-600"
             >See all</a
           >
         </div>
-        <div class="scroll-container">
+        <div class="scroll-container section-news-detail">
           <article class="new-article">
             <figure class="margin-bottom-0">
               <img
@@ -232,8 +234,8 @@
           </article>
         </div>
       </section>
-      <section>
-        <div>
+      <section class="section-event">
+        <div class="section-event-header">
           <h2 class="color-white font-weight-600 mini-section-2">
             <span class="sq-start-yellow">■</span>&#32;Events
           </h2>
@@ -242,12 +244,12 @@
             dolore!
           </p>
         </div>
-        <div class="margin-bottom-10">
+        <div class="margin-bottom-10 section-event-see-all">
           <a href="./pages/news.html" class="font-weight-600 color-white"
             >See all</a
           >
         </div>
-        <div class="scroll-container">
+        <div class="scroll-container section-event-detail">
           <article class="event-container-odd">
             <div class="container-event-date-month">
               <p class="event-date">09</p>
@@ -326,8 +328,8 @@
           </article>
         </div>
       </section>
-      <section>
-        <div>
+      <section class="section-transport">
+        <div class="header-3-section-transport">
           <h2 class="color-black font-weight-600 mini-section-2">
             <span class="sq-start">■</span>&#32;Transport
           </h2>
@@ -336,12 +338,12 @@
             dolore!
           </p>
         </div>
-        <div class="margin-bottom-10">
+        <div class="margin-bottom-10 header-3-section-transport-see-all">
           <a href="./pages/news.html" class="font-weight-600 color-blue"
             >See all</a
           >
         </div>
-        <div class="transport-container">
+        <div class="transport-container header-3-section-transport-detail">
           <div class="one-transport-box background-color-light-gray">
             <div class="margin-bottom-10">
               <div class="take-remain-space"></div>
@@ -396,8 +398,8 @@
           </div>
         </div>
       </section>
-      <section>
-        <div>
+      <section class="section-thing-to-do">
+        <div class="section-thing-to-do-header">
           <h2 class="color-white font-weight-600 mini-section-2">
             <span class="sq-start-yellow">■</span>&#32;Things to Do
           </h2>
@@ -406,12 +408,12 @@
             dolore!
           </p>
         </div>
-        <div class="margin-bottom-10">
+        <div class="margin-bottom-10 section-thing-to-do-see-all">
           <a href="./pages/news.html" class="font-weight-600 color-beige"
             >See all</a
           >
         </div>
-        <div class="transport-container">
+        <div class="transport-container section-thing-to-do-detail">
           <div class="one-transport-box background-color-whitesmoke">
             <div class="margin-bottom-10">
               <div class="take-remain-space"></div>
@@ -464,8 +466,8 @@
           </div>
         </div>
       </section>
-      <section>
-        <div>
+      <section class="section-contact">
+        <div class="section-contact-header">
           <h2 class="color-black font-weight-600 mini-section-2">
             <span class="sq-start">■</span>&#32;Contacts
           </h2>
@@ -474,65 +476,149 @@
             dolore!
           </p>
         </div>
-        <div class="margin-bottom-10">
+        <div class="margin-bottom-10 section-contact-see-all">
           <a href="./pages/news.html" class="font-weight-600 color-blue"
             >See all</a
           >
         </div>
-        <div>
-          <div>
-            <h3>Government Contacts</h3>
-            <div>
-              <h4>Mayor's Office:</h4>
-              <i class="fa-solid fa-up-long"></i>
+        <div class="contact-container-box section-contact-detail">
+          <div class="contain-one-box">
+            <h3 class="font-weight-400 margin-bottom-0">Government Contacts</h3>
+            <div class="border-1-solid-lightgray width-100-per">
+              <div class="h4-icon-box">
+                <h4 class="margin-bottom-0">Mayor's Office:</h4>
+                <i
+                  class="fa-solid fa-up-long margin-bottom-0 arrow-up-icon"
+                ></i>
+              </div>
+              <div class="padding-15">
+                <p class="margin-0">Email: mayor@podebrady.cz</p>
+                <p class="margin-0">Phone: +420 325 612 111</p>
+                <p class="margin-0">
+                  Address: Jiriho namesti 20/1, 29001 Podebrady
+                </p>
+              </div>
             </div>
-            <div>
-              <p>Email: mayor@podebrady.cz</p>
-              <p>Phone: +420 325 612 111</p>
-              <p>Address: Jiriho namesti 20/1, 29001 Podebrady</p>
+            <div class="h4-icon-box border-1-solid-lightgray">
+              <h4 class="margin-bottom-0">Town Hall:</h4>
+              <i class="fa-solid fa-up-long margin-bottom-0 arrow-up-icon"></i>
             </div>
-            <div>
-              <h4>Town Hall:</h4>
-              <i class="fa-solid fa-up-long"></i>
-            </div>
-            <div>
-              <h4>Cultural Affairs:</h4>
-              <i class="fa-solid fa-up-long"></i>
-            </div>
-          </div>
-          <div>
-            <h3>Emergency Services</h3>
-            <div>
-              <h4>Town Hall:</h4>
-              <i class="fa-solid fa-up-long"></i>
-            </div>
-            <div>
-              <h4>Cultural Affairs:</h4>
-              <i class="fa-solid fa-up-long"></i>
-            </div>
-            <div>
-              <h4>Town Hall:</h4>
-              <i class="fa-solid fa-up-long"></i>
-            </div>
-            <div>
-              <h4>Cultural Affairs:</h4>
-              <i class="fa-solid fa-up-long"></i>
+            <div class="h4-icon-box border-1-solid-lightgray">
+              <h4 class="margin-bottom-0">Cultural Affairs:</h4>
+              <i
+                class="fa-solid fa-down-long margin-bottom-0 arrow-down-icon"
+              ></i>
             </div>
           </div>
-          <div>
-            <h3>Emergency Services</h3>
-            <div>
-              <h4>Town Hall:</h4>
-              <i class="fa-solid fa-up-long"></i>
+          <div class="contain-one-box margin-top-25">
+            <h3 class="font-weight-400 margin-bottom-0">Emergency Services</h3>
+            <div class="h4-icon-box border-1-solid-lightgray">
+              <h4 class="margin-bottom-0">Police:</h4>
+              <i
+                class="fa-solid fa-down-long margin-bottom-0 arrow-up-icon"
+              ></i>
             </div>
-            <div>
-              <h4>Cultural Affairs:</h4>
-              <i class="fa-solid fa-up-long"></i>
+            <div class="h4-icon-box border-1-solid-lightgray">
+              <h4 class="margin-bottom-0">Fire Department:</h4>
+              <i
+                class="fa-solid fa-down-long margin-bottom-0 arrow-down-icon"
+              ></i>
+            </div>
+            <div class="h4-icon-box border-1-solid-lightgray">
+              <h4 class="margin-bottom-0">Medical Emergency:</h4>
+              <i
+                class="fa-solid fa-down-long margin-bottom-0 arrow-down-icon"
+              ></i>
+            </div>
+            <div class="h4-icon-box border-1-solid-lightgray">
+              <h4 class="margin-bottom-0">European Emergency Number:</h4>
+              <i
+                class="fa-solid fa-down-long margin-bottom-0 arrow-down-icon"
+              ></i>
+            </div>
+          </div>
+          <div class="contain-one-box margin-top-25 background-color-white">
+            <h3 class="margin-bottom-0">Public Utilities</h3>
+            <div class="h4-icon-box border-1-solid-lightgray">
+              <h4 class="margin-bottom-0">Water Services:</h4>
+              <i
+                class="fa-solid fa-down-long margin-bottom-0 arrow-down-icon"
+              ></i>
+            </div>
+            <div class="h4-icon-box border-1-solid-lightgray">
+              <h4 class="margin-bottom-0">Electricity Services:</h4>
+              <i
+                class="fa-solid fa-down-long margin-bottom-0 arrow-down-icon"
+              ></i>
             </div>
           </div>
         </div>
       </section>
     </main>
+    <footer class="background-color-blue full-width">
+      <div class="space-margin-footer">
+        <div class="style-red-green-footer-line"></div>
+      </div>
+      <section
+        class="background-color-blue section-footer-podebrady width-100-per"
+      >
+        <div class="background-color-blue section-footer-podebrady-logo">
+          <div class="container-logo-footer">
+            <img
+              src="/assets/images/web_logo.png"
+              alt="Logo with four colors circle (Green, White, Red and Yellow)."
+              class="logo-footer"
+            />
+            <h3 class="margin-bottom-0 color-white font-size-25">Poděbrady</h3>
+          </div>
+        </div>
+        <div class="padding-15 section-footer-podebrady-text">
+          <div>
+            <p class="margin-bottom-0 font-weight-550 color-beige">
+              Geographic Location:
+            </p>
+            <p class="color-beige">
+              Podebrady is a historic spa town located in the Central Bohemian
+              Region of the Czech Republic, situated on the banks of the Elbe
+              River (Labe). It lies approximately 50 kilometers east of Prague.
+            </p>
+          </div>
+          <div>
+            <p class="margin-bottom-0 font-weight-550 color-beige">
+              Population:
+            </p>
+            <p class="color-beige">
+              As of 2021, the town has a population of around 14,000 residents.
+            </p>
+          </div>
+          <div>
+            <p class="margin-bottom-0 font-weight-550 color-beige">Climate:</p>
+            <p class="color-beige">
+              podébrady experiences a temperate continental climate with warm
+              summers and cold winters, making it ideal for year-round visits.
+            </p>
+          </div>
+        </div>
+        <div class="section-footer-podebrady-image">
+          <figure class="big-image-view padding-row-10">
+            <img
+              id=""
+              src="./assets/images/pexels-elias-tigiser-411757-9088004.jpg"
+              alt=""
+            />
+          </figure>
+        </div>
+      </section>
+      <div class="social-link-footer margin-top-25">
+        <a href="">Facebook</a>&#124;<a href="">Instagram</a>&#124;<a href=""
+          >LinkedIn</a
+        >&#124;<a href="">X Twitter</a>
+      </div>
+      <div class="style-red-green-footer-line"></div>
+      <div class="background-color-white copyright margin-bottom-0">
+        <p class="margin-bottom-0 padding-15">Copyright @2025</p>
+      </div>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./assets/js/scripts.js"></script>
   </body>
