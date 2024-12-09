@@ -30,7 +30,7 @@ $(document).ready(function () {
     }
   });
 
-  // Close the menu when resizing the window
+  // Close the menu when resizing the window added
   $(window).on("resize", function () {
     if (navMenu.hasClass("open")) {
       navMenu.removeClass("open");
