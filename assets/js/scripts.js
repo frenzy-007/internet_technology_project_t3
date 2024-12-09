@@ -308,7 +308,7 @@ function displayItems() {
             </div>
           </div>
           <div>
-            <a href=""><h3>${item.title}</h3></a>
+            <a href="/pages/new-detail.html"><h3>${item.title}</h3></a>
             <p>
               ${item.title} Description text...
             </p>
