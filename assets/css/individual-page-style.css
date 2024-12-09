@@ -47,10 +47,12 @@ button:disabled {
   margin-bottom: 30px;
 }
 
-.container-new-article-item {
+.container-new-article-item,
+.container-events-article-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .new-article-item {
@@ -117,6 +119,13 @@ button:disabled {
   border-radius: 5px;
 }
 
+.event-container {
+  width: 80%;
+  border: 1px black solid;
+  padding: 10px;
+  margin: 10px;
+}
+
 @media ((min-width: 800px) and (max-width:3600px)) {
   .info-podebrady-container-box-one > div {
     display: grid;
@@ -165,7 +174,8 @@ button:disabled {
 }
 
 @media ((min-width: 600px) and (max-width:700px)) {
-  .container-new-article-item {
+  .container-new-article-item,
+  .container-events-article-item {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -174,22 +184,32 @@ button:disabled {
   .new-article-item {
     width: 40%;
   }
+
+  .event-container {
+    width: 40%;
+  }
 }
 
 @media ((min-width: 700px) and (max-width:1200px)) {
-  .container-new-article-item {
+  .container-new-article-item,
+  .container-events-article-item {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
   }
 
   .new-article-item {
     width: 30%;
   }
+
+  .event-container {
+    width: 30%;
+  }
 }
 
 @media ((min-width: 1200px) and (max-width:3600px)) {
-  .container-new-article-item {
+  .container-new-article-item,
+  .container-events-article-item {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
@@ -198,9 +218,13 @@ button:disabled {
   .new-article-item {
     width: 23%;
   }
+  .event-container {
+    width: 23%;
+  }
 }
 
-.news-container-boxs {
+.news-container-boxs,
+.events-container-boxs {
   display: flex;
   flex-direction: column;
   align-items: center;
