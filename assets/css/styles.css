@@ -678,10 +678,14 @@ main > section:nth-of-type(odd):not(:first-child) {
     right: calc(76px + 20px); /* Account for menu button width + margins */
     z-index: 1000; /* Ensure it appears above other elements */
     display: flex; /* Flex layout for input and button alignment */
-    justify-content: flex-start; /* Align items to the left */
+    justify-content: flex-end; /* Align items to the left */
     align-items: center;
     padding: 0;
     margin-left: 10px;
+  }
+
+  #input-search {
+    width: 50%;
   }
 
   .flex-box-row-end {
@@ -689,7 +693,7 @@ main > section:nth-of-type(odd):not(:first-child) {
   }
 }
 
-@media ((min-width: 1201px) and (max-width: 1800px)) {
+@media ((min-width: 1201px) and (max-width: 3600px)) {
   .menu-icon {
     display: none;
   }
@@ -707,12 +711,17 @@ main > section:nth-of-type(odd):not(:first-child) {
     right: calc(76px + 20px);
     z-index: 1000;
     padding-bottom: 0;
+    max-width: 1000px;
   }
 
   .nav-menu > ul {
     display: flex;
     flex-direction: row;
     background-color: rgb(0 89 255);
+  }
+
+  #input-search {
+    width: 40%;
   }
 
   .nav-menu > ul > li > a {
@@ -798,6 +807,41 @@ main > section:nth-of-type(odd):not(:first-child) {
   }
 }
 
+@media ((min-width: 1800px) and (max-width: 3600px)) {
+  .scroll-container > .new-article {
+    width: 20vw;
+  }
+
+  .scroll-container > .event-container-even,
+  .event-container-odd {
+    width: 20vw;
+  }
+
+  .podebrady-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+  }
+
+  .podebrady-section-1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .podebrady-section-2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .podebrady-section-3 {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+  .big-image-view {
+    height: 50rem;
+  }
+}
+
 @media ((min-width: 500px) and (max-width: 700px)) {
   .scroll-container > .new-article {
     width: 50vw;
@@ -851,7 +895,7 @@ main > section:nth-of-type(odd):not(:first-child) {
   }
 }
 
-@media ((min-width: 700px) and (max-width: 1800px)) {
+@media ((min-width: 700px) and (max-width: 3600px)) {
   .section-transport,
   .section-thing-to-do,
   .section-contact,
@@ -923,7 +967,7 @@ main > section:nth-of-type(odd):not(:first-child) {
   }
 }
 
-@media ((min-width: 800px) and (max-width: 1800px)) {
+@media ((min-width: 800px) and (max-width: 3600px)) {
   .section-footer-podebrady {
     display: grid;
     grid-template-columns: 1fr 1fr;

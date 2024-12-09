@@ -43,6 +43,7 @@ button:disabled {
 }
 
 .pagination {
+  margin-top: 20px;
   margin-bottom: 30px;
 }
 
@@ -59,6 +60,7 @@ button:disabled {
   height: 600px;
   overflow: hidden;
   position: relative;
+  margin: 10px;
 }
 
 /* Breadcrumb Container */
@@ -115,7 +117,7 @@ button:disabled {
   border-radius: 5px;
 }
 
-@media ((min-width: 800px) and (max-width:1800px)) {
+@media ((min-width: 800px) and (max-width:3600px)) {
   .info-podebrady-container-box-one > div {
     display: grid;
     grid-template-rows: auto;
@@ -155,7 +157,7 @@ button:disabled {
   }
 }
 
-@media ((min-width: 1000px) and (max-width:1800px)) {
+@media ((min-width: 1000px) and (max-width:3600px)) {
   .info-contacts-container-box-one > div {
     width: 24%;
     margin-right: 5px;
@@ -186,11 +188,11 @@ button:disabled {
   }
 }
 
-@media ((min-width: 1200px) and (max-width:1800px)) {
+@media ((min-width: 1200px) and (max-width:3600px)) {
   .container-new-article-item {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    width: 100%;
   }
 
   .new-article-item {
