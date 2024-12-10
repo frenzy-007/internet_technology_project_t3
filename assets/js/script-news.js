@@ -2,37 +2,37 @@ const items = [
   {
     title: "Reconstruction of the continuous road through Přední Lhota",
     content_type: "Announcement",
-    date: "5/12/2024",
-    img: "/assets/images/news/news1.jpg",
-    link: "/pages/news-item1.html",
+    date: "05/12/2024",
+    img: "../assets/images/news/news1.jpg",
+    link: "./news-item1.html",
   },
   {
     title: "Restrictions on the operation of the Podebrady Town Hall",
     content_type: "Announcement",
-    date: "3/12/2024",
-    img: "/assets/images/news/news2.jpg",
-    link: "/pages/news-item2.html",
+    date: "03/12/2024",
+    img: "../assets/images/news/news2.jpg",
+    link: "./news-item2.html",
   },
   {
     title: "7th meeting of the Poděbrady City Council",
     content_type: "Announcement",
-    date: "3/12/2024",
-    img: "/assets/images/news/news3.jpg",
-    link: "/pages/news-item3.html",
+    date: "03/12/2024",
+    img: "../assets/images/news/news3.jpg",
+    link: "./news-item3.html",
   },
   {
     title: "Lunch break, calendar week 48-50 2024",
     content_type: "Announcement",
     date: "11/20/2024",
-    img: "/assets/images/news/news4.jpg",
-    link: "/pages/news-item4.html",
+    img: "../assets/images/news/news4.jpg",
+    link: "./news-item4.html",
   },
   {
     title: "Revitalization of the central spa park",
     content_type: "News",
     date: "23/09/2024",
-    img: "/assets/images/news/news5.jpg",
-    link: "/pages/news-item4.html",
+    img: "../assets/images/news/news5.jpg",
+    link: "./news-item4.html",
   },
   // Add more articles as needed
 ];
@@ -82,8 +82,9 @@ function displayItemsNews() {
                 <span>${item.date}</span>
               </div>
             </div>
-            <div>
+            <div class="title-text-news-box">
               <a href="${item.link}"><h3>${item.title}</h3></a>
+              <br/>
               <p>
                 ${item.title} Description text...
               </p>
@@ -98,12 +99,6 @@ function displayItemsNews() {
   pageNumber.innerHTML = `Page ${currentPage} of ${Math.ceil(
     items.length / itemsPerPage
   )}`;
-
-  // Scroll to the top of the first item in the list
-  const firstItem = document.querySelector(".container-new-article-item");
-  if (firstItem) {
-    firstItem.scrollIntoView({ behavior: "smooth" });
-  }
 }
 
 function changePage(direction) {
@@ -117,6 +112,5 @@ function changePage(direction) {
   }
   displayItemsNews();
 }
-
 // Initial load
 displayItemsNews();

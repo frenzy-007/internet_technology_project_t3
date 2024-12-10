@@ -33,7 +33,8 @@ div > h5 {
 }
 
 .info-podebrady-container-box-one,
-.info-contacts-container-box-one {
+.info-contacts-container-box-one,
+.info-additional-container-box-one {
   width: 100%;
 }
 
@@ -56,13 +57,39 @@ button:disabled {
 }
 
 .new-article-item {
+  display: flex;
+  flex-direction: column;
   width: 90%;
   background-color: whitesmoke;
+  box-sizing: border-box;
   padding: 20px;
-  height: 600px;
   overflow: hidden;
   position: relative;
   margin: 10px;
+}
+
+/* Image styling */
+.new-article-item figure {
+  flex-shrink: 0;
+  margin-bottom: 15px;
+}
+
+/* Flex container for content type and date */
+.new-article-item .container-extra-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping into multiple rows */
+  margin-bottom: 15px;
+}
+
+/* Styling for the content type and date boxes */
+.box-type-date {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 5px; /* Add space between stacked items */
 }
 
 /* Breadcrumb Container */
@@ -119,12 +146,63 @@ button:disabled {
   border-radius: 5px;
 }
 
+#item-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px; /* Adjust the gap between the articles as needed */
+  justify-content: flex-start;
+  align-items: center; /* Ensures all articles stretch to match the tallest one */
+}
+
 .event-container {
   width: 80%;
-  height: 20%;
   border: 1px black solid;
   padding: 10px;
   margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.event-container > div {
+  flex: 1;
+  overflow: hidden;
+}
+
+.event-container h3,
+.event-container p {
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis when text is too long */
+}
+
+.container-event-date-month {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px; /* Adjust space between date/month */
+}
+
+.new-article-item h3,
+.new-article-item p {
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Apply line-clamp to p and h3 elements */
+.new-article-item p,
+.new-article-item h3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Clamps text to 3 lines */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title-text-news-box {
+  height: 21.2rem;
 }
 
 @media ((min-width: 800px) and (max-width:3600px)) {
@@ -175,15 +253,16 @@ button:disabled {
 }
 
 @media ((min-width: 600px) and (max-width:700px)) {
-  .container-new-article-item,
   .container-events-article-item {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
   }
 
-  .new-article-item {
-    width: 40%;
+  .container-new-article-item {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .event-container {
@@ -191,7 +270,19 @@ button:disabled {
   }
 }
 
-@media ((min-width: 700px) and (max-width:1200px)) {
+@media ((min-width: 600px) and (max-width:750px)) {
+  .container-new-article-item {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .new-article-item {
+    width: 40%;
+  }
+}
+
+@media ((min-width: 750px) and (max-width:1200px)) {
   .container-new-article-item,
   .container-events-article-item {
     flex-direction: row;

@@ -3,8 +3,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".nav-menu a");
   const homeLink = document.querySelector(".nav-menu li:first-child");
   const podebradySection = document.querySelector("#podebrady-section");
+  const navbar = document.querySelector(".container-logo"); // Assuming this is your navbar
+
+  const getNavbarHeight = () => {
+    // Dynamically calculate the navbar height (could be done with either of these)
+    return navbar.offsetHeight; // This returns the height of the navbar element
+  };
 
   const handleScroll = () => {
+    const navbarHeight = getNavbarHeight(); // Get the current navbar height
     let currentSection = "";
 
     // If the user is at the top of the page, make Home active
@@ -22,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
     sections.forEach((section) => {
       const rect = section.getBoundingClientRect();
       if (
-        rect.top <= window.innerHeight / 2 &&
-        rect.bottom >= window.innerHeight / 2
+        rect.top <= window.innerHeight / 2 + navbarHeight &&
+        rect.bottom >= window.innerHeight / 2 + navbarHeight
       ) {
         currentSection = section.getAttribute("id");
       }
@@ -38,8 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (podebradySection) {
       const rect = podebradySection.getBoundingClientRect();
       if (
-        rect.top <= window.innerHeight / 2 &&
-        rect.bottom >= window.innerHeight / 2
+        rect.top <= window.innerHeight / 2 + navbarHeight &&
+        rect.bottom >= window.innerHeight / 2 + navbarHeight
       ) {
         // Activate Poděbrady link
         navLinks.forEach((link) => {
@@ -93,8 +100,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const targetSection = document.getElementById(targetId);
 
       if (targetSection) {
+        const navbarHeight = getNavbarHeight(); // Recalculate the navbar height for smooth scrolling
         window.scrollTo({
-          top: targetSection.offsetTop,
+          top: targetSection.offsetTop - navbarHeight, // Subtract navbar height for proper scrolling
           behavior: "smooth",
         });
       }

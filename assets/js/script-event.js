@@ -5,7 +5,7 @@ const eventListData = [
     description: "Poděbrady Advent program... ",
     time: "2:00am/10:00am - 6:00pm",
     location: "@Various locations",
-    link: "/assets/images/events/Advent.jpg",
+    link: "../assets/images/events/Advent.jpg",
   },
   {
     title: "Christmas concert",
@@ -13,7 +13,7 @@ const eventListData = [
     description: "Ticket costs 250kč...",
     time: "Starts at 7:00pm",
     location: "@City theater",
-    link: "/assets/images/events/ChristmasConcert.png",
+    link: "../assets/images/events/ChristmasConcert.png",
   },
   {
     title: "Christmas dream",
@@ -21,7 +21,7 @@ const eventListData = [
     description: "Christmas carol concert...",
     time: "Starts at 6:00pm",
     location: "@City theater",
-    link: "/assets/images/events/ChristmasDream.jpg",
+    link: "../assets/images/events/ChristmasDream.jpg",
   },
   {
     title: "Christmas for youth",
@@ -29,7 +29,7 @@ const eventListData = [
     description: "Teens and young adults...",
     time: "Starts at 1:00pm",
     location: "@T-Club",
-    link: "/assets/images/events/ChristmasForYoungAdults.png",
+    link: "../assets/images/events/ChristmasForYoungAdults.png",
   },
   {
     title: "Chirstmas with Mameluk",
@@ -37,7 +37,7 @@ const eventListData = [
     description: "Rock, pop songs by Mameluk...",
     time: "Starts at 2:00pm",
     location: "@Colonnade",
-    link: "/assets/images/events/Mamulek.png",
+    link: "../assets/images/events/Mamulek.png",
   },
   {
     title: "Chirstmas with Saxharem",
@@ -45,7 +45,7 @@ const eventListData = [
     description: "Saxophone quartet Saxharem...",
     time: "Starts at 7:00pm",
     location: "@Havířský kostelík",
-    link: "/assets/images/events/Saxharem.jpg",
+    link: "../assets/images/events/Saxharem.jpg",
   },
   {
     title: "Workshop for kids",
@@ -53,7 +53,7 @@ const eventListData = [
     description: "Bring your kids to ...",
     time: "Starts at 3:30pm",
     location: "@City library",
-    link: "/assets/images/events/WorkshopForChildren.png",
+    link: "../assets/images/events/WorkshopForChildren.png",
   },
 ];
 
